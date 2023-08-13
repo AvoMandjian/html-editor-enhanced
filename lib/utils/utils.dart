@@ -667,23 +667,35 @@ class _DropdownRoutePage<T> extends StatelessWidget {
       dropdownColor: dropdownColor,
     );
 
-    return MediaQuery.removePadding(
-      context: context,
-      removeTop: true,
-      removeBottom: true,
-      removeLeft: true,
-      removeRight: true,
-      child: Builder(
-        builder: (BuildContext context) {
-          return CustomSingleChildLayout(
-            delegate: _DropdownMenuRouteLayout<T>(
-              buttonRect: buttonRect,
-              route: route,
-              textDirection: textDirection,
-            ),
-            child: capturedThemes.wrap(menu),
-          );
+    return PointerInterceptor(
+      child: GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
         },
+        child: Container(
+          color: Colors.transparent,
+          width: double.infinity,
+          height: double.infinity,
+          child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            removeBottom: true,
+            removeLeft: true,
+            removeRight: true,
+            child: Builder(
+              builder: (BuildContext context) {
+                return CustomSingleChildLayout(
+                  delegate: _DropdownMenuRouteLayout<T>(
+                    buttonRect: buttonRect,
+                    route: route,
+                    textDirection: textDirection,
+                  ),
+                  child: capturedThemes.wrap(menu),
+                );
+              },
+            ),
+          ),
+        ),
       ),
     );
   }
