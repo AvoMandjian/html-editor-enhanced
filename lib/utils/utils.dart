@@ -7,6 +7,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:html_editor_enhanced/utils/shims/dart_ui.dart';
+import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 /// small function to always check if mounted before running setState()
 void setState(
@@ -296,13 +297,15 @@ class _DropdownMenuItemButtonState<T>
     }
     Widget child = FadeTransition(
       opacity: opacity,
-      child: InkWell(
-        autofocus: widget.itemIndex == widget.route.selectedIndex,
-        onTap: _handleOnTap,
-        onFocusChange: _handleFocusChange,
-        child: Container(
-          padding: widget.padding,
-          child: widget.route.items[widget.itemIndex],
+      child: PointerInterceptor(
+        child: InkWell(
+          autofocus: widget.itemIndex == widget.route.selectedIndex,
+          onTap: _handleOnTap,
+          onFocusChange: _handleFocusChange,
+          child: Container(
+            padding: widget.padding,
+            child: widget.route.items[widget.itemIndex],
+          ),
         ),
       ),
     );
@@ -397,13 +400,10 @@ class _DropdownMenuState<T> extends State<_DropdownMenu<T>> {
               ),
               child: PrimaryScrollController(
                 controller: widget.route.scrollController!,
-                child: Scrollbar(
-                  thumbVisibility: true,
-                  child: ListView(
-                    padding: kMaterialListPadding,
-                    shrinkWrap: true,
-                    children: children,
-                  ),
+                child: ListView(
+                  padding: kMaterialListPadding,
+                  shrinkWrap: true,
+                  children: children,
                 ),
               ),
             ),
