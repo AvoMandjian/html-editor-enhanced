@@ -8,6 +8,10 @@
 .note-editable {
 	background: #121212 !important;
 	caret-color: #1290A4 !important;
+
+	::selection {
+		background-color: #BCE0E6 !important;
+	}
 }
 
 .panel-heading,
