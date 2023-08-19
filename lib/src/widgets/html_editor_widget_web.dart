@@ -22,6 +22,7 @@ class HtmlEditorWidget extends StatefulWidget {
     required this.htmlToolbarOptions,
     required this.otherOptions,
     required this.initBC,
+    this.mediaUploadWidget,
   }) : super(key: key);
 
   final HtmlEditorController controller;
@@ -31,6 +32,7 @@ class HtmlEditorWidget extends StatefulWidget {
   final HtmlToolbarOptions htmlToolbarOptions;
   final OtherOptions otherOptions;
   final BuildContext initBC;
+  final Widget? mediaUploadWidget;
 
   @override
   _HtmlEditorWidgetWebState createState() => _HtmlEditorWidgetWebState();
@@ -549,6 +551,7 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
           widget.htmlToolbarOptions.toolbarPosition ==
                   ToolbarPosition.aboveEditor
               ? ToolbarWidget(
+                  mediaUploadWidget: widget.mediaUploadWidget,
                   key: toolbarKey,
                   controller: widget.controller,
                   htmlToolbarOptions: widget.htmlToolbarOptions,
@@ -574,6 +577,7 @@ class _HtmlEditorWidgetWebState extends State<HtmlEditorWidget> {
           widget.htmlToolbarOptions.toolbarPosition ==
                   ToolbarPosition.belowEditor
               ? ToolbarWidget(
+                  mediaUploadWidget: widget.mediaUploadWidget,
                   key: toolbarKey,
                   controller: widget.controller,
                   htmlToolbarOptions: widget.htmlToolbarOptions,

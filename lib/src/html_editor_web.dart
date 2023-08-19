@@ -13,6 +13,7 @@ class HtmlEditor extends StatelessWidget {
     this.htmlToolbarOptions = const HtmlToolbarOptions(),
     this.otherOptions = const OtherOptions(),
     this.plugins = const [],
+    this.mediaUploadWidget,
   }) : super(key: key);
 
   /// The controller that is passed to the widget, which allows multiple [HtmlEditor]
@@ -35,12 +36,15 @@ class HtmlEditor extends StatelessWidget {
   /// Sets the list of Summernote plugins enabled in the editor.
   final List<Plugins> plugins;
 
+  final Widget? mediaUploadWidget;
+
   @override
   Widget build(BuildContext context) {
     if (kIsWeb) {
       return HtmlEditorWidget(
         key: key,
         controller: controller,
+        mediaUploadWidget: mediaUploadWidget,
         callbacks: callbacks,
         plugins: plugins,
         htmlEditorOptions: htmlEditorOptions,
