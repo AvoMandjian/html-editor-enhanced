@@ -15,6 +15,7 @@ class ToolbarWidget extends StatefulWidget {
   /// The [HtmlEditorController] is mainly used to call the [execCommand] method
   final HtmlEditorController controller;
   final HtmlToolbarOptions htmlToolbarOptions;
+  final Widget? mediaUploadWidget;
   final Callbacks? callbacks;
 
   const ToolbarWidget({
@@ -22,6 +23,7 @@ class ToolbarWidget extends StatefulWidget {
     required this.controller,
     required this.htmlToolbarOptions,
     required this.callbacks,
+    this.mediaUploadWidget,
   }) : super(key: key);
 
   @override
@@ -1940,6 +1942,9 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                       return PointerInterceptor(
                         child: StatefulBuilder(builder:
                             (BuildContext context, StateSetter setState) {
+                          if (widget.mediaUploadWidget != null) {
+                            return widget.mediaUploadWidget!;
+                          }
                           return AlertDialog(
                             title: Text('Insert Image'),
                             scrollable: true,

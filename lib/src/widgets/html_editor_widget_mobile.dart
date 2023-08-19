@@ -23,6 +23,7 @@ class HtmlEditorWidget extends StatefulWidget {
     required this.htmlEditorOptions,
     required this.htmlToolbarOptions,
     required this.otherOptions,
+    this.mediaUploadWidget,
   }) : super(key: key);
 
   final HtmlEditorController controller;
@@ -31,6 +32,7 @@ class HtmlEditorWidget extends StatefulWidget {
   final HtmlEditorOptions htmlEditorOptions;
   final HtmlToolbarOptions htmlToolbarOptions;
   final OtherOptions otherOptions;
+  final Widget? mediaUploadWidget;
 
   @override
   _HtmlEditorWidgetMobileState createState() => _HtmlEditorWidgetMobileState();
@@ -123,6 +125,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
               widget.htmlToolbarOptions.toolbarPosition ==
                       ToolbarPosition.aboveEditor
                   ? ToolbarWidget(
+                      mediaUploadWidget: widget.mediaUploadWidget,
                       key: toolbarKey,
                       controller: widget.controller,
                       htmlToolbarOptions: widget.htmlToolbarOptions,
@@ -180,9 +183,8 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                     print(message.message);
                   },
                   onWindowFocus: (controller) async {
-                    if (widget.htmlEditorOptions.shouldEnsureVisible &&
-                        Scrollable.of(context) != null) {
-                      await Scrollable.of(context)!.position.ensureVisible(
+                    if (widget.htmlEditorOptions.shouldEnsureVisible) {
+                      await Scrollable.of(context).position.ensureVisible(
                             context.findRenderObject()!,
                           );
                     }
@@ -526,9 +528,8 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
                       controller.addJavaScriptHandler(
                           handlerName: 'onChangeContent',
                           callback: (contents) {
-                            if (widget.htmlEditorOptions.shouldEnsureVisible &&
-                                Scrollable.of(context) != null) {
-                              Scrollable.of(context)!.position.ensureVisible(
+                            if (widget.htmlEditorOptions.shouldEnsureVisible) {
+                              Scrollable.of(context).position.ensureVisible(
                                     context.findRenderObject()!,
                                   );
                             }
@@ -545,6 +546,7 @@ class _HtmlEditorWidgetMobileState extends State<HtmlEditorWidget> {
               widget.htmlToolbarOptions.toolbarPosition ==
                       ToolbarPosition.belowEditor
                   ? ToolbarWidget(
+                      mediaUploadWidget: widget.mediaUploadWidget,
                       key: toolbarKey,
                       controller: widget.controller,
                       htmlToolbarOptions: widget.htmlToolbarOptions,
