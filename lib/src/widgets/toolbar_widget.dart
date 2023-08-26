@@ -339,11 +339,13 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
             opacity: _enabled ? 1 : 0.5,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
-              child: Wrap(
-                alignment: WrapAlignment.start,
-                runSpacing: widget.htmlToolbarOptions.gridViewVerticalSpacing,
-                spacing: widget.htmlToolbarOptions.gridViewHorizontalSpacing,
-                children: _buildChildren(),
+              child: Container(
+                width: double.infinity,
+                child: Wrap(
+                  runSpacing: widget.htmlToolbarOptions.gridViewVerticalSpacing,
+                  spacing: widget.htmlToolbarOptions.gridViewHorizontalSpacing,
+                  children: _buildChildren(),
+                ),
               ),
             ),
           ),
