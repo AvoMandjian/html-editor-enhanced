@@ -1111,6 +1111,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                   newColor = _backColorSelected;
                 }
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -1793,6 +1794,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 final formKey = GlobalKey<FormState>();
                 var openNewTab = false;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -1937,6 +1939,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 FilePickerResult? previousResult;
                 String? validateFailed;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -2112,6 +2115,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 FilePickerResult? previousResult;
                 String? validateFailed;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -2269,6 +2273,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 FilePickerResult? previousResult;
                 String? validateFailed;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -2426,6 +2431,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 FilePickerResult? previousResult;
                 String? validateFailed;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -2562,6 +2568,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                 var currentRows = 1;
                 var currentCols = 1;
                 await showDialog(
+                    barrierDismissible: true,
                     context: context,
                     builder: (BuildContext context) {
                       return PointerInterceptor(
@@ -2703,6 +2710,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                     true;
                 if (proceed) {
                   await showDialog(
+                      barrierDismissible: true,
                       context: context,
                       builder: (BuildContext context) {
                         return PointerInterceptor(
