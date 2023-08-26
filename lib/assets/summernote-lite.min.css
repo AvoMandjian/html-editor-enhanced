@@ -927,6 +927,12 @@ a.note-dropdown-item:hover {
 
 .note-editor .note-editing-area .note-editable {
   outline: none;
+  caret-color: #1290A4 !important;
+  padding: 5px 16px 5px !important;
+
+  ::selection {
+    background-color: #BCE0E6 !important;
+  }
 }
 
 .note-editor .note-editing-area .note-editable sup {

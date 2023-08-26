@@ -86,6 +86,63 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum vita
 ''',
                 ),
                 htmlToolbarOptions: HtmlToolbarOptions(
+                  defaultToolbarButtons: [
+                    StyleButtons(
+                      style: false,
+                    ),
+                    FontSettingButtons(
+                      fontName: false,
+                      fontSize: false,
+                      fontSizeUnit: false,
+                    ),
+                    FontButtons(
+                      bold: true,
+                      clearAll: true,
+                      italic: true,
+                      strikethrough: true,
+                      subscript: true,
+                      superscript: true,
+                      underline: true,
+                    ),
+                    ColorButtons(
+                      foregroundColor: true,
+                      highlightColor: true,
+                    ),
+                    ListButtons(
+                      listStyles: true,
+                      ol: true,
+                      ul: true,
+                    ),
+                    ParagraphButtons(
+                      alignCenter: true,
+                      alignJustify: true,
+                      alignLeft: true,
+                      alignRight: true,
+                      caseConverter: true,
+                      decreaseIndent: true,
+                      increaseIndent: true,
+                      lineHeight: true,
+                      textDirection: true,
+                    ),
+                    InsertButtons(
+                      audio: true,
+                      hr: true,
+                      link: true,
+                      otherFile: true,
+                      picture: true,
+                      table: true,
+                      video: true,
+                    ),
+                    OtherButtons(
+                      codeview: true,
+                      copy: true,
+                      fullscreen: true,
+                      help: true,
+                      paste: true,
+                      redo: true,
+                      undo: true,
+                    ),
+                  ],
                   toolbarPosition: ToolbarPosition.aboveEditor, //by default
                   toolbarType: ToolbarType.nativeScrollable, //by default
                   onButtonPressed:
