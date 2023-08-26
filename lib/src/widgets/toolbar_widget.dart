@@ -340,6 +340,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Wrap(
+                alignment: WrapAlignment.start,
                 runSpacing: widget.htmlToolbarOptions.gridViewVerticalSpacing,
                 spacing: widget.htmlToolbarOptions.gridViewHorizontalSpacing,
                 children: _buildChildren(),
