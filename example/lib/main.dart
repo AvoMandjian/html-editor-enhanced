@@ -86,6 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum vita
 ''',
                 ),
                 htmlToolbarOptions: HtmlToolbarOptions(
+                  separatorWidget: SizedBox.shrink(),
                   defaultToolbarButtons: [
                     StyleButtons(
                       style: false,
@@ -144,7 +145,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vestibulum vita
                     ),
                   ],
                   toolbarPosition: ToolbarPosition.aboveEditor, //by default
-                  toolbarType: ToolbarType.nativeGrid, //by default
+                  toolbarType: ToolbarType.nativeScrollable, //by default
                   onButtonPressed:
                       (ButtonType type, bool? status, Function? updateStatus) {
                     print(
