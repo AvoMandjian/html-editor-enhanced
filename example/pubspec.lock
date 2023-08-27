@@ -174,7 +174,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "2.5.2+15"
+    version: "2.5.2+16"
   infinite_listview:
     dependency: transitive
     description:
