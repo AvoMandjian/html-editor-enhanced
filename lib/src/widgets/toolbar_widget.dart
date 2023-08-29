@@ -481,7 +481,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
     for (var t in widget.htmlToolbarOptions.defaultToolbarButtons) {
       if (t is StyleButtons && t.style) {
         toolbarChildren.add(Container(
-          padding: const EdgeInsets.only(left: 8.0),
+          // padding: const EdgeInsets.only(left: 8.0),
           height: widget.htmlToolbarOptions.toolbarItemHeight,
           decoration: !widget.htmlToolbarOptions.renderBorder
               ? null
@@ -613,7 +613,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
       if (t is FontSettingButtons) {
         if (t.fontName) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null
@@ -695,7 +695,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
         }
         if (t.fontSize) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null
@@ -825,7 +825,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
         }
         if (t.fontSizeUnit) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null
@@ -1281,7 +1281,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
         }
         if (t.listStyles) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null
@@ -1504,7 +1504,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
         }
         if (t.lineHeight) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null
@@ -1660,7 +1660,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
         }
         if (t.caseConverter) {
           toolbarChildren.add(Container(
-            padding: const EdgeInsets.only(left: 8.0),
+            // padding: const EdgeInsets.only(left: 8.0),
             height: widget.htmlToolbarOptions.toolbarItemHeight,
             decoration: !widget.htmlToolbarOptions.renderBorder
                 ? null

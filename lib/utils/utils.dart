@@ -1204,7 +1204,10 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
           child: InkWell(
             onTap: _enabled ? _handleTap : null,
             // behavior: HitTestBehavior.opaque,
-            child: result,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: result,
+            ),
           ),
         ),
       ),
