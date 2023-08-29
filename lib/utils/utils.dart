@@ -1205,7 +1205,7 @@ class _DropdownButtonState<T> extends State<CustomDropdownButton<T>>
             onTap: _enabled ? _handleTap : null,
             // behavior: HitTestBehavior.opaque,
             child: Padding(
-              padding: const EdgeInsets.only(right: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: result,
             ),
           ),
