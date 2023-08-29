@@ -160,6 +160,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome_flutter:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: main
+      resolved-ref: ef4f7f32e77599e108594b41e6c7e3468ac2bee0
+      url: "git@git.dpllc.co:digital-pomegranate/epifini/dp_font_awesome.git"
+    source: git
+    version: "10.3.0"
   infinite_listview:
     dependency: transitive
     description:

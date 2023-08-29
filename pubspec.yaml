@@ -2,8 +2,9 @@ name: html_editor_enhanced
 description:
   HTML rich text editor for Android, iOS, and Web, using the Summernote library.
   Enhanced with highly customizable widget-based controls, bug fixes, callbacks, dark mode, and more.
-version: 2.5.2+16
+version: 2.5.2+17
 homepage: https://github.com/AvoMandjian/html-editor-enhanced
+publish_to: none
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -12,6 +13,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  font_awesome_flutter:
+    git:
+      url: git@git.dpllc.co:digital-pomegranate/epifini/dp_font_awesome.git
+      ref: main
   # webview plugin
   flutter_inappwebview: ^5.7.2+3
   # plugin to get webview's visible fraction for keyboard height adjustment

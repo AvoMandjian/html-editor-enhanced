@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+double _iconSize = 16;
 
 /// Abstract class that all the toolbar classes extend
 abstract class Toolbar {
@@ -49,18 +52,53 @@ class FontButtons extends Toolbar {
 
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (bold) icons.add(Icon(Icons.format_bold));
-    if (italic) icons.add(Icon(Icons.format_italic));
-    if (underline) icons.add(Icon(Icons.format_underline));
-    if (clearAll) icons.add(Icon(Icons.format_clear));
+    if (bold) {
+      icons.add(Icon(
+        FontAwesomeIcons.bold,
+        size: _iconSize,
+      ));
+    }
+    if (italic) {
+      icons.add(Icon(
+        FontAwesomeIcons.italic,
+        size: _iconSize,
+      ));
+    }
+    if (underline) {
+      icons.add(Icon(
+        FontAwesomeIcons.underline,
+        size: _iconSize,
+      ));
+    }
+    if (clearAll) {
+      icons.add(Icon(
+        FontAwesomeIcons.textSlash,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (strikethrough) icons.add(Icon(Icons.format_strikethrough));
-    if (superscript) icons.add(Icon(Icons.superscript));
-    if (subscript) icons.add(Icon(Icons.subscript));
+    if (strikethrough) {
+      icons.add(Icon(
+        FontAwesomeIcons.strikethrough,
+        size: _iconSize,
+      ));
+    }
+    if (superscript) {
+      icons.add(Icon(
+        FontAwesomeIcons.superscript,
+        size: _iconSize,
+      ));
+    }
+    if (subscript) {
+      icons.add(Icon(
+        FontAwesomeIcons.subscript,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
@@ -77,8 +115,18 @@ class ColorButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (foregroundColor) icons.add(Icon(Icons.format_color_text));
-    if (highlightColor) icons.add(Icon(Icons.format_color_fill));
+    if (foregroundColor) {
+      icons.add(Icon(
+        FontAwesomeIcons.font,
+        size: _iconSize,
+      ));
+    }
+    if (highlightColor) {
+      icons.add(Icon(
+        FontAwesomeIcons.fillDrip,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
@@ -97,8 +145,18 @@ class ListButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (ul) icons.add(Icon(Icons.format_list_bulleted));
-    if (ol) icons.add(Icon(Icons.format_list_numbered));
+    if (ul) {
+      icons.add(Icon(
+        FontAwesomeIcons.listUl,
+        size: _iconSize,
+      ));
+    }
+    if (ol) {
+      icons.add(Icon(
+        FontAwesomeIcons.listOl,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
@@ -129,17 +187,47 @@ class ParagraphButtons extends Toolbar {
 
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (alignLeft) icons.add(Icon(Icons.format_align_left));
-    if (alignCenter) icons.add(Icon(Icons.format_align_center));
-    if (alignRight) icons.add(Icon(Icons.format_align_right));
-    if (alignJustify) icons.add(Icon(Icons.format_align_justify));
+    if (alignLeft) {
+      icons.add(Icon(
+        FontAwesomeIcons.alignLeft,
+        size: _iconSize,
+      ));
+    }
+    if (alignCenter) {
+      icons.add(Icon(
+        FontAwesomeIcons.alignCenter,
+        size: _iconSize,
+      ));
+    }
+    if (alignRight) {
+      icons.add(Icon(
+        FontAwesomeIcons.alignRight,
+        size: _iconSize,
+      ));
+    }
+    if (alignJustify) {
+      icons.add(Icon(
+        FontAwesomeIcons.alignJustify,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (increaseIndent) icons.add(Icon(Icons.format_indent_increase));
-    if (decreaseIndent) icons.add(Icon(Icons.format_indent_decrease));
+    if (increaseIndent) {
+      icons.add(Icon(
+        Icons.format_indent_increase,
+        size: _iconSize,
+      ));
+    }
+    if (decreaseIndent) {
+      icons.add(Icon(
+        Icons.format_indent_decrease,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
@@ -166,13 +254,48 @@ class InsertButtons extends Toolbar {
 
   List<Icon> getIcons() {
     var icons = <Icon>[];
-    if (link) icons.add(Icon(Icons.link));
-    if (picture) icons.add(Icon(Icons.image_outlined));
-    if (audio) icons.add(Icon(Icons.audiotrack_outlined));
-    if (video) icons.add(Icon(Icons.videocam_outlined));
-    if (otherFile) icons.add(Icon(Icons.attach_file));
-    if (table) icons.add(Icon(Icons.table_chart_outlined));
-    if (hr) icons.add(Icon(Icons.horizontal_rule));
+    if (link) {
+      icons.add(Icon(
+        FontAwesomeIcons.link,
+        size: _iconSize,
+      ));
+    }
+    if (picture) {
+      icons.add(Icon(
+        FontAwesomeIcons.image,
+        size: _iconSize,
+      ));
+    }
+    if (audio) {
+      icons.add(Icon(
+        FontAwesomeIcons.musicNote,
+        size: _iconSize,
+      ));
+    }
+    if (video) {
+      icons.add(Icon(
+        FontAwesomeIcons.video,
+        size: _iconSize,
+      ));
+    }
+    if (otherFile) {
+      icons.add(Icon(
+        FontAwesomeIcons.file,
+        size: _iconSize,
+      ));
+    }
+    if (table) {
+      icons.add(Icon(
+        FontAwesomeIcons.chartTreeMap,
+        size: _iconSize,
+      ));
+    }
+    if (hr) {
+      icons.add(Icon(
+        FontAwesomeIcons.rulerHorizontal,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
@@ -199,18 +322,53 @@ class OtherButtons extends Toolbar {
 
   List<Icon> getIcons1() {
     var icons = <Icon>[];
-    if (fullscreen) icons.add(Icon(Icons.fullscreen));
-    if (codeview) icons.add(Icon(Icons.code));
-    if (undo) icons.add(Icon(Icons.undo));
-    if (redo) icons.add(Icon(Icons.redo));
-    if (help) icons.add(Icon(Icons.help_outline));
+    if (fullscreen) {
+      icons.add(Icon(
+        FontAwesomeIcons.expand,
+        size: _iconSize,
+      ));
+    }
+    if (codeview) {
+      icons.add(Icon(
+        FontAwesomeIcons.code,
+        size: _iconSize,
+      ));
+    }
+    if (undo) {
+      icons.add(Icon(
+        FontAwesomeIcons.undo,
+        size: _iconSize,
+      ));
+    }
+    if (redo) {
+      icons.add(Icon(
+        FontAwesomeIcons.redo,
+        size: _iconSize,
+      ));
+    }
+    if (help) {
+      icons.add(Icon(
+        FontAwesomeIcons.question,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 
   List<Icon> getIcons2() {
     var icons = <Icon>[];
-    if (copy) icons.add(Icon(Icons.copy));
-    if (paste) icons.add(Icon(Icons.paste));
+    if (copy) {
+      icons.add(Icon(
+        FontAwesomeIcons.copy,
+        size: _iconSize,
+      ));
+    }
+    if (paste) {
+      icons.add(Icon(
+        FontAwesomeIcons.paste,
+        size: _iconSize,
+      ));
+    }
     return icons;
   }
 }
